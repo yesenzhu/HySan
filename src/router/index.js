@@ -2,31 +2,21 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Layout from "@/views/layout/index.vue";
 import Login from "@/views/login/login.vue";
-import Home from "@/views/home/Home.vue";
-const Product = () => import("@/views/product/index.vue");
-const List = () => import("@/views/product/list/index.vue");
-const Category = () => import("@/views/product/category/index.vue");
-const Case = () => import("@/views/product/case/index.vue");
-const Registration = () => import("@/views/product/registration/index.vue");
-const RegistrationForm = () =>
-  import("@/views/product/registrationForm/index.vue");
 
-const Order = () => import("@/views/order/index.vue");
-const OrderList = () => import("@/views/order/list/index.vue");
-const OrderCollect = () => import("@/views/order/collect/index.vue");
+const Identify = () => import('@/views/identify/index.vue')
+const IdentifyCase = () => import('@/views/identify/case/index.vue')
 
-const Advent = () => import("@/views/advent/index.vue");
-const AdventList = () => import("@/views/advent/list/index.vue");
+const Confirm = () => import('@/views/confirm/index.vue')
+const ConfirmCase = () => import('@/views/confirm/case/index.vue')
 
-const Update = () => import("@/views/update/index.vue");
-const UpdateError = () => import("@/views/update/error/index.vue");
-const UpdatePriority = () => import("@/views/update/update-priority/index.vue");
+const Follow = () => import('@/views/follow/index.vue')
+const FollowCase = () => import('@/views/follow/case/index.vue')
 
-const CoverSheets = () => import("@/views/cover/index.vue");
-const LcoCase = () => import("@/views/cover/lco-case/index.vue");
+const Review = () => import('@/views/review/index.vue')
+const ReviewCase = () => import('@/views/review/case/index.vue')
 Vue.use(VueRouter);
 
-const routes = [
+const constantRoutes = [
   {
     path: "/",
     name: "layout",
@@ -34,96 +24,53 @@ const routes = [
     children: [
       {
         path: "/",
-        redirect: 'product/list'
+        redirect: "identify/identify-case",
       },
       {
-        path: "/product",
-        name: "home",
-        component: Product,
+        path: "/identify",
+        name: "identify",
+        component: Identify,
         children: [
           {
-            path: "list",
-            name: "list",
-            component: List,
-          },
-          {
-            path: "category",
-            name: "category",
-            component: Category,
-          },
-          {
-            path: "case",
-            name: "case",
-            component: Case,
-          },
-          {
-            path: "registration",
-            name: "registration",
-            component: Registration,
-          },
-          {
-            path: "registrationForm",
-            name: "registrationForm",
-            component: RegistrationForm,
-          },
-          ,
-        ],
-      },
-      {
-        path: "/order",
-        name: "order",
-        component: Order,
-        children: [
-          {
-            path: "orderlist",
-            name: "orderlist",
-            component: OrderList,
-          },
-          {
-            path: "collect",
-            name: "collect",
-            component: OrderCollect,
+            path: "identify-case",
+            name: "IdentifyCase",
+            component: IdentifyCase,
           },
         ],
       },
       {
-        path: "/advent",
-        name: "advent",
-        component: Advent,
+        path: "/follow-up",
+        name: "ollowUp",
+        component: Follow,
         children: [
           {
-            path: "adventlist",
-            name: "adventlist",
-            component: AdventList,
+            path: "follow-case",
+            name: "FollowUpCase",
+            component: FollowCase,
           },
         ],
       },
       {
-        path: "/update",
-        name: "update",
-        component: Update,
+        path: "/confirm",
+        name: "Confirm",
+        component: Confirm,
         children: [
           {
-            path: "error",
-            name: "error",
-            component: UpdateError,
-          },
-          {
-            path: "update-priority",
-            name: "update-priority",
-            component: UpdatePriority,
+            path: "confirm-case",
+            name: "ConfirmCase",
+            component: ConfirmCase,
           },
         ],
       },
       {
-        path: "/cover-sheets",
-        name: "cover-sheets",
-        component: CoverSheets,
+        path: "/review",
+        name: "Review",
+        component: Review,
         children: [
           {
-            path: "lco-case",
-            name: "lco-case",
-            component: LcoCase,
+            path: "review-case",
+            name: "ReviewCase",
+            component: ReviewCase,
           },
         ],
       },
@@ -139,7 +86,7 @@ const routes = [
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes,
+  routes: constantRoutes,
 });
 
 export default router;

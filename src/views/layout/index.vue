@@ -26,7 +26,6 @@ export default {
   mounted() {},
   methods: {
     changeShow() {
-      console.log(2222)
       this.isCollapse = !this.isCollapse
     },
   },
