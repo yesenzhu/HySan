@@ -13,60 +13,51 @@
         router
         :collapse="isCollapse"
       >
-        <el-submenu index="/product">
+        <el-submenu index="/identify">
           <template slot="title">
             <i class="el-icon-news"></i>
-            <span slot="title">Draft</span>
+            <span slot="title">Identify</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="/product/list">
+            <el-menu-item index="/identify/case">
               <i class="el-icon-chat-line-round"></i>
-              <span slot="title">Draft acknowledgement email</span>
-            </el-menu-item>
-            <el-menu-item index="/product/category">
-              <i class="el-icon-open"></i>
-              <span slot="title">Draft completion email preview</span>
-            </el-menu-item>
-            <el-menu-item index="/product/case">
-              <i class="el-icon-document-add"></i>
-              <span slot="title">EO Update Case Status</span>
-            </el-menu-item>
-
-            <el-menu-item index="/product/registration">
-              <i class="el-icon-toilet-paper"></i>
-              <span slot="title">LCO Case Registration Form</span>
-            </el-menu-item>
-            <el-menu-item index="/product/registrationForm">
-              <i class="el-icon-refresh-right"></i>
-              <span slot="title">Review Registration Form</span>
+              <span slot="title">{{cardTitle}}</span>
             </el-menu-item>
           </el-menu-item-group>
         </el-submenu>
-        <el-submenu index="/update">
+        <el-submenu index="/follow-up">
           <template slot="title">
             <i class="el-icon-s-help"></i>
-            <span slot="title">Update Priority</span>
+            <span slot="title">Follow Up</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="/update/error">
+            <el-menu-item index="/follow-up/case">
               <i class="el-icon-s-promotion"></i>
-              <span slot="title">Error Message</span>
-            </el-menu-item>
-            <el-menu-item index="/update/update-priority">
-              <i class="el-icon-message"></i>
-              <span slot="title">Priority List</span>
+              <span slot="title">{{ cardTitle }}</span>
             </el-menu-item>
           </el-menu-item-group>
         </el-submenu>
-        <el-submenu index="/cover-sheets">
+        <el-submenu index="/confirm">
           <template slot="title">
             <i class="el-icon-picture"></i>
-            <span slot="title">Cover Sheets</span>
+            <span slot="title">Confirm</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="/cover-sheets/lco-case">
+            <el-menu-item index="/confirm/case">
               <i class="el-icon-s-flag"></i>
-              <span slot="title">LCO Case Filing</span>
+              <span slot="title">{{cardTitle}}</span>
+            </el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
+        <el-submenu index="/review">
+          <template slot="title">
+            <i class="el-icon-picture"></i>
+            <span slot="title">Review</span>
+          </template>
+          <el-menu-item-group>
+            <el-menu-item index="/review/case">
+              <i class="el-icon-s-flag"></i>
+              <span slot="title">{{ cardTitle }}</span>
             </el-menu-item>
           </el-menu-item-group>
         </el-submenu>
@@ -75,14 +66,16 @@
   </div>
 </template>
 <script>
+import { TimelineItem } from 'element-ui';
+
 export default {
   name: "Menu",
   props: ["isCollapse"],
   data() {
-    return {};
+    return {
+      cardTitle: '案例 Case'
+    };
   },
-  mounted() {},
-  methods: {},
 };
 </script>
 <style lang="less" scoped>
