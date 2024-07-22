@@ -1,4 +1,4 @@
-# vue-project
+# HySan
 
 ## Project setup
 ```
