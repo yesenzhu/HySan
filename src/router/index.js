@@ -23,7 +23,7 @@ const constantRoutes = [
     component: Layout,
     children: [
       {
-        path: '/',
+        path: '/identify',
         redirect: 'identify/case',
       },
       {

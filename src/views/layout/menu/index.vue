@@ -39,13 +39,13 @@
         </el-submenu>
         <el-submenu index="/confirm">
           <template slot="title">
-            <i class="el-icon-picture"></i>
+            <i class="el-icon-refrigerator"></i>
             <span slot="title">Confirm</span>
           </template>
           <el-menu-item-group>
             <el-menu-item index="/confirm/case">
               <i class="el-icon-s-flag"></i>
-              <span slot="title">{{ cardTitle }}</span>
+              <span slot="title"> Confirm Case </span>
             </el-menu-item>
           </el-menu-item-group>
         </el-submenu>
@@ -56,8 +56,8 @@
           </template>
           <el-menu-item-group>
             <el-menu-item index="/review/case">
-              <i class="el-icon-s-flag"></i>
-              <span slot="title">{{ cardTitle }}</span>
+              <i class="el-icon-news"></i>
+              <span slot="title">Review Case</span>
             </el-menu-item>
           </el-menu-item-group>
         </el-submenu>
