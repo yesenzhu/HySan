@@ -86,7 +86,7 @@ const constantRoutes = [
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  constantRoutes,
+  routes: constantRoutes,
 });
 
 export default router;
