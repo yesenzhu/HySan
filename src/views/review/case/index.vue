@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <el-card>
-      <span style="font-weight: 700; font-size: 18px">Confirm</span>
+      <span style="font-weight: 700; font-size: 18px">Review Case</span>
     </el-card>
     <div class="add-content">
       <el-card class="add-card">
