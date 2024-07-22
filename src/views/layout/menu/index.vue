@@ -21,7 +21,7 @@
           <el-menu-item-group>
             <el-menu-item index="/identify/case">
               <i class="el-icon-chat-line-round"></i>
-              <span slot="title">{{cardTitle}}</span>
+              <span slot="title">{{ cardTitle }}</span>
             </el-menu-item>
           </el-menu-item-group>
         </el-submenu>
@@ -31,7 +31,7 @@
             <span slot="title">Follow Up</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="/follow-up/case">
+            <el-menu-item index="/follow/case">
               <i class="el-icon-s-promotion"></i>
               <span slot="title">{{ cardTitle }}</span>
             </el-menu-item>
@@ -45,7 +45,7 @@
           <el-menu-item-group>
             <el-menu-item index="/confirm/case">
               <i class="el-icon-s-flag"></i>
-              <span slot="title">{{cardTitle}}</span>
+              <span slot="title">{{ cardTitle }}</span>
             </el-menu-item>
           </el-menu-item-group>
         </el-submenu>
@@ -66,17 +66,17 @@
   </div>
 </template>
 <script>
-import { TimelineItem } from 'element-ui';
+import { TimelineItem } from 'element-ui'
 
 export default {
-  name: "Menu",
-  props: ["isCollapse"],
+  name: 'Menu',
+  props: ['isCollapse'],
   data() {
     return {
-      cardTitle: '案例 Case'
-    };
+      cardTitle: '案例 Case',
+    }
   },
-};
+}
 </script>
 <style lang="less" scoped>
 .scrollbar-wrapper {

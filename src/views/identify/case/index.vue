@@ -1,13 +1,9 @@
 <template>
-    <div>
-        case
-    </div>
+  <div>identify</div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="scss" scoped></style>

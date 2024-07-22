@@ -1,7 +1,7 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Layout from "@/views/layout/index.vue";
-import Login from "@/views/login/login.vue";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Layout from '@/views/layout/index.vue'
+import Login from '@/views/login/login.vue'
 
 const Identify = () => import('@/views/identify/index.vue')
 const IdentifyCase = () => import('@/views/identify/case/index.vue')
@@ -14,62 +14,62 @@ const FollowCase = () => import('@/views/follow/case/index.vue')
 
 const Review = () => import('@/views/review/index.vue')
 const ReviewCase = () => import('@/views/review/case/index.vue')
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const constantRoutes = [
   {
-    path: "/",
-    name: "layout",
+    path: '/',
+    name: 'layout',
     component: Layout,
     children: [
       {
-        path: "/",
-        redirect: "identify/identify-case",
+        path: '/',
+        redirect: 'identify/case',
       },
       {
-        path: "/identify",
-        name: "identify",
+        path: '/identify',
+        name: 'identify',
         component: Identify,
         children: [
           {
-            path: "identify-case",
-            name: "IdentifyCase",
+            path: 'case',
+            name: 'IdentifyCase',
             component: IdentifyCase,
           },
         ],
       },
       {
-        path: "/follow-up",
-        name: "ollowUp",
+        path: '/follow',
+        name: 'Follow',
         component: Follow,
         children: [
           {
-            path: "follow-case",
-            name: "FollowUpCase",
+            path: 'case',
+            name: 'FollowUpCase',
             component: FollowCase,
           },
         ],
       },
       {
-        path: "/confirm",
-        name: "Confirm",
+        path: '/confirm',
+        name: 'Confirm',
         component: Confirm,
         children: [
           {
-            path: "confirm-case",
-            name: "ConfirmCase",
+            path: 'case',
+            name: 'ConfirmCase',
             component: ConfirmCase,
           },
         ],
       },
       {
-        path: "/review",
-        name: "Review",
+        path: '/review',
+        name: 'Review',
         component: Review,
         children: [
           {
-            path: "review-case",
-            name: "ReviewCase",
+            path: 'case',
+            name: 'ReviewCase',
             component: ReviewCase,
           },
         ],
@@ -77,16 +77,16 @@ const constantRoutes = [
     ],
   },
   {
-    path: "/login",
-    name: "login",
+    path: '/login',
+    name: 'login',
     component: Login,
   },
-];
+]
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes: constantRoutes,
-});
+})
 
-export default router;
+export default router
