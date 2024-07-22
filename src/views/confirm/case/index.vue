@@ -1,23 +1,15 @@
 <template>
-    <div>
-        case
-    </div>
+  <div>confirm</div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-
-        }
-    },
-    created() {
-
-    },
-    methods: {
-
-    }
+  data() {
+    return {}
+  },
+  created() {},
+  methods: {},
 }
 </script>
 
-<style lang='scss' scoped></style>
+<style lang="scss" scoped></style>
