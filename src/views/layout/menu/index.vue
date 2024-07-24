@@ -21,7 +21,7 @@
           <el-menu-item-group>
             <el-menu-item index="/identify/case">
               <i class="el-icon-chat-line-round"></i>
-              <span slot="title">{{ cardTitle }}</span>
+              <span slot="title">1-Identify</span>
             </el-menu-item>
           </el-menu-item-group>
         </el-submenu>
@@ -33,7 +33,7 @@
           <el-menu-item-group>
             <el-menu-item index="/follow/case">
               <i class="el-icon-s-promotion"></i>
-              <span slot="title">{{ cardTitle }}</span>
+              <span slot="title">2-Follow Up</span>
             </el-menu-item>
           </el-menu-item-group>
         </el-submenu>
