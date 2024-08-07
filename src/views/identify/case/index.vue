@@ -38,28 +38,28 @@ export default {
     Review,
   },
   methods: {
-    async handleClick() {
+    handleClick() {
       this.allForm = {
         ...this.$refs.receive.formData,
         ...this.$refs.follow.formData,
         ...this.$refs.confirm.formData,
         ...this.$refs.review.formData,
       }
-      // this.$refs.receive.this.$refs.identify.validate(async valid => {
-      // if (valid) {
-      this.loading = true
-      const params = {
-        data: this.allForm,
-        packageName: 'Workflow 9',
-      }
-      const res = await $http(params)
-      if (res) {
-        this.loading = false
-        this.$message.success('提交成功')
-        // this.receive()
-      }
-      // }
-      // })
+      this.$refs['receive'].$refs['identify'].validate(async (valid) => {
+        if (valid) {
+          this.loading = true
+          const params = {
+            data: this.allForm,
+            packageName: 'Workflow 9',
+          }
+          const res = await $http(params)
+          if (res) {
+            this.loading = false
+            this.$message.success('提交成功')
+            // this.receive()
+          }
+        }
+      })
     },
   },
 }
