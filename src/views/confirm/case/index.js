@@ -75,11 +75,11 @@ export const priority = [
 ]
 
 export const caseTypeList = [
-  { id: 1, name: '問題回報 Problem Report' },
-  { id: 2, name: '詢問問題 Inquiry' },
-  { id: 3, name: '要求 Requirement' },
-  { id: 4, name: '欣賞 Appreciation' },
-  { id: 5, name: '建議 Suggestion' },
+  { id: 'problem_report', name: '問題回報 Problem Report' },
+  { id: 'inquiry', name: '詢問問題 Inquiry' },
+  { id: 'requirement', name: '要求 Requirement' },
+  { id: 'appreciation', name: '欣賞 Appreciation' },
+  { id: 'suggestion', name: '建議 Suggestion' },
 ]
 export const propertyList = [
   { id: 1, name: 'choice 1' },
