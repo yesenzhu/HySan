@@ -1,11 +1,11 @@
 {
   "courseClassifyListCopy": [
-    { "id": 1, "name": "電話 Telephone" },
-    { "id": 2, "name": "電子郵件 Email" },
-    { "id": 3, "name": "檢查 Inspection" },
-    { "id": 4, "name": "面對面 Face to Face" },
-    { "id": 5, "name": "網頁 Website" },
-    { "id": 6, "name": "IoT" }
+    { "id": "telephone", "name": "電話 Telephone" },
+    { "id": "email", "name": "電子郵件 Email" },
+    { "id": "inspection", "name": "檢查 Inspection" },
+    { "id": "face to face.", "name": "面對面 Face to Face" },
+    { "id": "website", "name": "網頁 Website" },
+    { "id": "iot", "name": "IoT" }
   ],
   "caseType": [
     { "id": 1, "name": "問題回報 Problem Report" },
