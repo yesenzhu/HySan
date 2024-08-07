@@ -8,12 +8,10 @@
         <div class="baseinfo-container">
           <div class="baseinfo-card">
             <Identify ref="receive" />
-            <Follow />
-            <Confirm />
-            <Review />
-            <el-button @click="handleClick" type="primary" :loading="loading"
-              >提交 Submit</el-button
-            >
+            <Follow ref="follow" />
+            <Confirm ref="confirm" />
+            <Review ref="review" />
+            <el-button @click="handleClick" type="primary" :loading="loading">提交 Submit</el-button>
           </div>
         </div>
       </el-card>
@@ -22,37 +20,48 @@
 </template>
 
 <script>
-import Identify from './components/identify.vue';
-import Follow from './components/follow.vue';
-import Confirm from './components/confirm.vue';
-import Review from './components/review.vue';
+import Identify from './components/identify.vue'
+import Follow from './components/follow.vue'
+import Confirm from './components/confirm.vue'
+import Review from './components/review.vue'
+import { $http } from '@/http/fetch'
+
 export default {
   data: () => ({
-    loading: false
+    loading: false,
+    allForm: {},
   }),
   components: {
     Identify,
     Follow,
     Confirm,
-    Review
+    Review,
   },
   methods: {
-    handleClick() {
-      this.$refs['receive'].$refs['identify'].validate((valid) => {
-        valid && (
-          async () => {
-            this.loading = true;
-            await new Promise((resolve) => setTimeout(resolve, 500));
-            this.loading = false;
-            this.$message({
-              message: '提交成功',
-              type: 'success'
-            });
-          }
-        )()
-    })
+    async handleClick() {
+      this.allForm = {
+        ...this.$refs.receive.formData,
+        ...this.$refs.follow.formData,
+        ...this.$refs.confirm.formData,
+        ...this.$refs.review.formData,
+      }
+      // this.$refs.receive.this.$refs.identify.validate(async valid => {
+      // if (valid) {
+      this.loading = true
+      const params = {
+        data: this.allForm,
+        packageName: 'Workflow 9',
+      }
+      const res = await $http(params)
+      if (res) {
+        this.loading = false
+        this.$message.success('提交成功')
+        // this.receive()
+      }
+      // }
+      // })
+    },
   },
-}
 }
 </script>
 <style lang="scss" scoped>
