@@ -1,7 +1,26 @@
+// module.exports = {
+//     devServer: {
+//         client: {
+//             overlay: false
+//         }
+//     }
+// }
+
 module.exports = {
-    devServer: {
-        client: {
-            overlay: false
-        }
-    }
+  configureWebpack: {
+    resolve: {
+      alias: {
+        src: '@/src',
+      },
+    },
+  },
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost/Workflow',
+        changeOrigin: true,
+        pathRewrite: { '^/api': 'api' },
+      },
+    },
+  },
 }
