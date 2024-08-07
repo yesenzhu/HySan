@@ -1,11 +1,12 @@
 export const originList = [
-  { id: 1, name: 'telephone' },
-  { id: 2, name: 'email' },
-  { id: 3, name: 'inspection' },
-  { id: 4, name: 'face_to_face' },
-  { id: 5, name: 'website' },
-  { id: 6, name: 'iot' },
+  { id: 1, name: '電話 Telephone' },
+  { id: 2, name: '電子郵件 Email' },
+  { id: 3, name: '檢查 Inspection' },
+  { id: 4, name: '面對面 Face to Face' },
+  { id: 5, name: '網頁 Website' },
+  { id: 6, name: 'IoT' },
 ]
+
 export const courseClassifyListCopy = [
   { id: 1, name: 'To be sent by system' },
   { id: 2, name: 'To be sent manually' },
@@ -92,9 +93,3 @@ export const locationList = [
   { id: 4, name: '公共區域 Common area' },
   { id: 5, name: '其他 Others' },
 ]
-
-// 零售 Retail
-// 辦公室 Office
-// 停車場 Carpark
-// 公共區域 Common area
-// 其他 Others

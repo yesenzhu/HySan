@@ -279,7 +279,7 @@ export default {
         }
       })
     },
-    resetForm(formName) {
+    resetForm() {
       this.$refs.caseForm.resetFields()
       this.formData = {}
     },
