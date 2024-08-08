@@ -160,8 +160,8 @@
     </el-form-item>
     <el-form-item label="是否租戶 Is Tenant?">
       <el-radio-group v-model="formData.isTenement">
-        <el-radio :label="1">是 Yes</el-radio>
-        <el-radio :label="2">否 No</el-radio>
+        <el-radio label="y">是 Yes</el-radio>
+        <el-radio label="n">否 No</el-radio>
       </el-radio-group>
     </el-form-item>
     <el-form-item label="租戶名稱 Lease Tenant">
@@ -289,7 +289,7 @@ export default {
     formData: {
       workflowEmailId: '',
       folderEmailId: '',
-      origin: 1,
+      origin: "telephone",
       type: 1,
       subjectType: null,
       pyhsicsType: null,
