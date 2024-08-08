@@ -107,9 +107,7 @@
               </el-form-item>
 
               <el-form-item label="客戶名稱 Customer Name">
-                <el-select v-model="formData.customerName" size="small" filterable clearable style="width: 100%" placeholder="請選擇">
-                  <el-option v-for="item in courseClassifyListCopy" :key="item.id" :label="item.name" :value="item.id"></el-option>
-                </el-select>
+                <el-input v-model="formData.customerName" size="small"></el-input>
               </el-form-item>
 
               <el-form-item label="單位 Unit">
@@ -234,7 +232,7 @@
 </template>
 
 <script>
-import { originList, courseClassifyListCopy, subjectList, priority, caseTypeList, propertyList, locationList } from './index'
+import { originList, subjectList, priority, caseTypeList, propertyList, locationList } from './index'
 import { $http } from '@/http'
 
 export default {
@@ -243,7 +241,6 @@ export default {
     return {
       loading: false,
       originList,
-      courseClassifyListCopy,
       subjectList,
       priority,
       caseTypeList,
