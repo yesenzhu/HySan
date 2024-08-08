@@ -50,13 +50,11 @@ export default {
           this.loading = true
           const params = {
             data: this.allForm,
-            packageName: 'Workflow 9',
           }
           const res = await $http(params)
           if (res) {
             this.loading = false
             this.$message.success('提交成功')
-            // this.receive()
           }
         }
       })

@@ -1,4 +1,4 @@
-export const $http = async ({ data = {}, packageName = "" }) => {
+export const $http = async ({ data = {}}) => {
   const result = Object.entries(data).reduce((current, [Name, Value]) => {
       return [...current, { Name, Value }];
   }, []);
@@ -12,8 +12,8 @@ export const $http = async ({ data = {}, packageName = "" }) => {
     Origin: "String content",
     Originator: "String content",
     ParameterCollection: result,
-    Timestamp: "/Date(2024 - 07 - 30T13: 54:43.511Z)/",
-    WorkflowName: packageName,
+    // Timestamp: "/Date(2024 - 07 - 30T13: 54:43.511Z)/",
+    WorkflowName: "HysanSubmitWorkflow",
   };
   const options = {
     body: JSON.stringify(staticJSON),
