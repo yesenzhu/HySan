@@ -1,10 +1,10 @@
 export const originList = [
-  { id: 1, name: '電話 Telephone' },
-  { id: 2, name: '電子郵件 Email' },
-  { id: 3, name: '檢查 Inspection' },
-  { id: 4, name: '面對面 Face to Face' },
-  { id: 5, name: '網頁 Website' },
-  { id: 6, name: 'IoT' },
+  { id: 'telephone', name: '電話 Telephone' },
+  { id: 'email', name: '電子郵件 Email' },
+  { id: 'inspection', name: '檢查 Inspection' },
+  { id: 'face_to_face', name: '面對面 Face to Face' },
+  { id: 'website', name: '網頁 Website' },
+  { id: 'iot', name: 'IoT' },
 ]
 
 export const courseClassifyListCopy = [
@@ -69,17 +69,17 @@ export const subjectList = [
 ]
 
 export const priority = [
-  { id: 1, name: '高 High' },
-  { id: 2, name: '標準 Normal' },
-  { id: 3, name: '低 Low' },
+  { id: 'high', name: '高 High' },
+  { id: 'normal', name: '標準 Normal' },
+  { id: 'low', name: '低 Low' },
 ]
 
 export const caseTypeList = [
-  { id: 1, name: '問題回報 Problem Report' },
-  { id: 2, name: '詢問問題 Inquiry' },
-  { id: 3, name: '要求 Requirement' },
-  { id: 4, name: '欣賞 Appreciation' },
-  { id: 5, name: '建議 Suggestion' },
+  { id: 'problem_report', name: '問題回報 Problem Report' },
+  { id: 'inquiry', name: '詢問問題 Inquiry' },
+  { id: 'requirement', name: '要求 Requirement' },
+  { id: 'appreciation', name: '欣賞 Appreciation' },
+  { id: 'suggestion', name: '建議 Suggestion' },
 ]
 export const propertyList = [
   { id: 1, name: 'choice 1' },
@@ -87,9 +87,9 @@ export const propertyList = [
   { id: 3, name: 'choice 3' },
 ]
 export const locationList = [
-  { id: 1, name: '零售 Retail' },
-  { id: 2, name: '辦公室 Office' },
-  { id: 3, name: '停車場 Carpark' },
-  { id: 4, name: '公共區域 Common area' },
-  { id: 5, name: '其他 Others' },
+  { id: 'retail', name: '零售 Retail' },
+  { id: 'office', name: '辦公室 Office' },
+  { id: 'carpark', name: '停車場 Carpark' },
+  { id: 'common_area', name: '公共區域 Common area' },
+  { id: 'others', name: '其他 Others' },
 ]
