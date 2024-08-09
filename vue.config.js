@@ -1,11 +1,3 @@
-// module.exports = {
-//     devServer: {
-//         client: {
-//             overlay: false
-//         }
-//     }
-// }
-
 module.exports = {
   configureWebpack: {
     resolve: {
@@ -17,9 +9,9 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://192.168.0.102/Workflow',
+        target: process.env.VUE_APP_URL,
         changeOrigin: true,
-        pathRewrite: { '^/api': 'api' },
+        pathRewrite: { '^/api': '' },
       },
     },
   },
