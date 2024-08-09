@@ -2,7 +2,6 @@ export const $http = async ({ data = {}}) => {
   const result = Object.entries(data).reduce((current, [Name, Value]) => {
       return [...current, { Name, Value }];
   }, []);
-    console.log(result,8888);
   const staticJSON = {
     Initiator: {
       InitiatorDisplayName: "Workflow",
@@ -25,7 +24,7 @@ export const $http = async ({ data = {}}) => {
     cache: "no-cache",
   };
   try {
-    const { status = 400, ok = false } = await fetch("/api/instances", options);
+    const { status = 400, ok = false } = await fetch(process.env.NODE_ENV == 'dev' ? '/api' : process.env.VUE_APP_URL, options);
     return {
       status,
       ok: status === 200 && ok,

@@ -27,6 +27,9 @@ import Review from './components/review.vue'
 import { $http } from '@/http/fetch'
 
 export default {
+  created() {
+    console.log(process.env.NODE_ENV);
+  },
   data: () => ({
     loading: false,
     allForm: {},
